@@ -2,7 +2,7 @@
 
 namespace RealEstate.Data.Migrations
 {
-    public partial class IntitalCreate : Migration
+    public partial class IntitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

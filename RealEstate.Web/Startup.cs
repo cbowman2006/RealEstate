@@ -39,6 +39,7 @@ namespace RealEstate.Web
 			services.AddDbContext<RealEstateDbContext>(options =>
 				options.UseSqlServer(Configuration.GetConnectionString("RealEstateConnection")));
 				services.AddScoped<IAuthService, AuthService>();
+				services.AddScoped<IUserService, UserService>();
 			services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters

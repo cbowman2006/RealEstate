@@ -11,6 +11,7 @@ namespace RealEstate.Service.Mapping
             CreateMap<User, UserDetail>();
 
             CreateMap<UserRegistration, User>();
+            CreateMap<UserUpdate, User>();
             
         }
         

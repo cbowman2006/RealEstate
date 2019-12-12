@@ -42,7 +42,7 @@ namespace RealEstate.Web.Controllers.ApiControllers
 			var createdUser = await authService.Register(userToCreate, userRegistration.Password);
 			var userToReturn = mapper.Map<UserDetail>(userToCreate);
 
-			return StatusCode(201);
+			return CreatedAtRoute("GetUser", new { controller = "Users", id = userToCreate.Id }, userToReturn);
 
 		}
 

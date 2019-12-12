@@ -1,0 +1,12 @@
+<form #loginForm="ngForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <input class="form-control" name="username" placeholder="Username" required [(ngModel)] ="model.username">
+    </div>     
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="Password" required [(ngModel)] ="model.password">
+    </div>
+      <div class="form-group text-right">
+        <button class="btn btn-lg btn-primary mr-1" type="submit" [disabled] ="!loginForm.valid">Sign In</button>
+      </div>
+  </form>
+ 

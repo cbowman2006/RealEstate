@@ -1,0 +1,15 @@
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+        <h1 class="text-center">{{title}}</h1>
+        <p class="text-center">
+          <a [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
+          <a [routerLink]="['/register']" *ngIf="authType == 'login'">Need an account?</a>
+        </p>
+        <app-login *ngIf="authType == 'login'"></app-login>
+        <app-register *ngIf="authType == 'register'"></app-register>
+      </div>
+    </div>
+  </div>
+</div>

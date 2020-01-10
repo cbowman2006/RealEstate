@@ -18,11 +18,15 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
+
+
 
 
 //Services
 import { AlertifyService } from './services/alertify.service';
 import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
 
 export function tokenGetter(){
   return localStorage.getItem('token');
@@ -38,7 +42,8 @@ export function tokenGetter(){
     FooterComponent,
     LoginComponent,
     NavBarComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,8 @@ export function tokenGetter(){
   ],
   providers: [
     AlertifyService,
-    AuthService, 
+    AuthService,
+    UserService
     
   ],
   bootstrap: [AppComponent]

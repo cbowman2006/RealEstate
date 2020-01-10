@@ -1,0 +1,10 @@
+.img-thumbnail{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	margin-bottom: 1rem;
+
+}
+.user-info{
+	background: #f3f3f3;
+}

@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   model: any = {};
+  userId: number;
   constructor(public authService: AuthService, private alertify: AlertifyService,
     private router: Router) { }
 
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     }, error => {
       this.alertify.error(error);
     },() => {
+      this.userId = this.authService.decodedToken.nameid;
       this.router.navigate(['/home']);
     });
   }
